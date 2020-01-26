@@ -1,8 +1,8 @@
-﻿# -*- mode: python; coding: utf-8-with-signature-dos -*-
+# -*- mode: python; coding: utf-8-with-signature-dos -*-
 
 ##                               nickname: Fakeymacs
 ##
-## Windows の操作を Emacs のキーバインドで行うための設定（Keyhac版）ver.20200109_01
+## Windows の操作を Emacs のキーバインドで行うための設定（Keyhac版）ver.20200109_01_mkashi
 ##
 
 # このスクリプトは、Keyhac for Windows ver 1.75 以降で動作します。
@@ -132,6 +132,35 @@ def configure(keymap):
     ## カスタマイズの設定
     ####################################################################################################
 
+    # WindowsキーをCtrlに置き換え
+    keymap_global = keymap.defineWindowKeymap()
+    keymap_global["LWin-A"] = "C-A"
+    keymap_global["LWin-B"] = "C-B"
+    keymap_global["LWin-C"] = "C-C"
+    keymap_global["LWin-D"] = "C-D"
+    keymap_global["LWin-E"] = "C-E"
+    keymap_global["LWin-F"] = "C-F"
+    keymap_global["LWin-G"] = "C-G"
+    keymap_global["LWin-H"] = "C-H"
+    keymap_global["LWin-I"] = "C-I"
+    keymap_global["LWin-J"] = "C-J"
+    keymap_global["LWin-K"] = "C-K"
+    keymap_global["LWin-L"] = "C-L"
+    keymap_global["LWin-M"] = "C-M"
+    keymap_global["LWin-N"] = "C-N"
+    keymap_global["LWin-O"] = "C-O"
+    keymap_global["LWin-P"] = "C-P"
+    keymap_global["LWin-Q"] = "C-Q"
+    keymap_global["LWin-R"] = "C-R"
+    keymap_global["LWin-S"] = "C-S"
+    keymap_global["LWin-T"] = "C-T"
+    keymap_global["LWin-U"] = "C-U"
+    keymap_global["LWin-V"] = "C-V"
+    keymap_global["LWin-W"] = "C-W"
+    keymap_global["LWin-X"] = "C-X"
+    keymap_global["LWin-Y"] = "C-Y"
+    keymap_global["LWin-Z"] = "C-Z"
+
     # Emacs のキーバインドにするウィンドウのクラスネームを指定する（全ての設定に優先する）
     emacs_target_class   = ["Edit"]                # テキスト入力フィールドなどが該当
 
@@ -168,7 +197,8 @@ def configure(keymap):
                             "ttermpro.exe",           # TeraTerm
                             "MobaXterm.exe",          # MobaXterm
                             "TurboVNC.exe",           # TurboVNC
-                            "vncviewer.exe"]          # UltraVNC
+                            "vncviewer.exe",          # UltraVNC
+                            "vncviewer64.exe"]        # UltraVNC
 
     # IME の切り替え“のみをしたい”アプリケーションソフトを指定する
     # （指定できるアプリケーションソフトは、not_emacs_target で（除外）指定したものからのみとなります）
@@ -221,13 +251,13 @@ def configure(keymap):
 
     # IME を切り替えるキーを指定する（複数指定可）
     # toggle_input_method_key = ["C-Yen"]
-    toggle_input_method_key = ["C-Yen", "C-o"]
+    toggle_input_method_key = ["C-Yen", "C-Space"]
 
     # C-iキーを Tabキーとして使うかどうかを指定する（True: 使う、False: 使わない）
     use_ctrl_i_as_tab = True
 
     # Escキーを Metaキーとして使うかどうかを指定する（True: 使う、False: 使わない）
-    use_esc_as_meta = True
+    use_esc_as_meta = False
 
     # Ctl-xプレフィックスキーに使うキーを指定する
     # （Ctl-xプレフィックスキーのモディファイアキーは、Ctrl または Alt のいずれかから指定してください）
@@ -1185,7 +1215,7 @@ def configure(keymap):
         # C-S-2 は有効とならないが、一応設定は行っておく（C-S-3 などは有効となる。なぜだろう？）
         define_key(keymap_emacs, "C-S-2", reset_search(reset_undo(reset_counter(set_mark_command))))
 
-    define_key(keymap_emacs, "C-Space",   reset_search(reset_undo(reset_counter(set_mark_command))))
+    #define_key(keymap_emacs, "C-Space",   reset_search(reset_undo(reset_counter(set_mark_command))))
     define_key(keymap_emacs, "Ctl-x h",   reset_search(reset_undo(reset_counter(mark_whole_buffer))))
     define_key(keymap_emacs, "Ctl-x C-p", reset_search(reset_undo(reset_counter(mark_page))))
 
