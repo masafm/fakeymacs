@@ -160,7 +160,34 @@ def configure(keymap):
     keymap_global["LWin-X"] = "C-X"
     keymap_global["LWin-Y"] = "C-Y"
     keymap_global["LWin-Z"] = "C-Z"
-
+    
+    keymap_global["LWin-Shift-A"] = "Win-A"
+    keymap_global["LWin-Shift-B"] = "Win-B"
+    keymap_global["LWin-Shift-C"] = "Win-C"
+    keymap_global["LWin-Shift-D"] = "Win-D"
+    keymap_global["LWin-Shift-E"] = "Win-E"
+    keymap_global["LWin-Shift-F"] = "Win-F"
+    keymap_global["LWin-Shift-G"] = "Win-G"
+    keymap_global["LWin-Shift-H"] = "Win-H"
+    keymap_global["LWin-Shift-I"] = "Win-I"
+    keymap_global["LWin-Shift-J"] = "Win-J"
+    keymap_global["LWin-Shift-K"] = "Win-K"
+    keymap_global["LWin-Shift-L"] = "Win-L"
+    keymap_global["LWin-Shift-M"] = "Win-M"
+    keymap_global["LWin-Shift-N"] = "Win-N"
+    keymap_global["LWin-Shift-O"] = "Win-O"
+    keymap_global["LWin-Shift-P"] = "Win-P"
+    keymap_global["LWin-Shift-Q"] = "Win-Q"
+    keymap_global["LWin-Shift-R"] = "Win-R"
+    keymap_global["LWin-Shift-S"] = "Win-S"
+    keymap_global["LWin-Shift-T"] = "Win-T"
+    keymap_global["LWin-Shift-U"] = "Win-U"
+    keymap_global["LWin-Shift-V"] = "Win-V"
+    keymap_global["LWin-Shift-W"] = "Win-W"
+    keymap_global["LWin-Shift-X"] = "Win-X"
+    keymap_global["LWin-Shift-Y"] = "Win-Y"
+    keymap_global["LWin-Shift-Z"] = "Win-Z"
+    
     # Emacs のキーバインドにするウィンドウのクラスネームを指定する（全ての設定に優先する）
     emacs_target_class   = ["Edit"]                # テキスト入力フィールドなどが該当
 
