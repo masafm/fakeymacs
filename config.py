@@ -281,6 +281,8 @@ def configure(keymap):
                             "TurboVNC.exe",           # TurboVNC
                             "vncviewer64.exe",        # UltraVNC
                             "Xpra-Launcher.exe",      # Xpra
+                            "ssh.exe",                # ssh client
+                            "cmd.exe",                # cmd
                            ]
 
     # IME の切り替え“のみをしたい”アプリケーションソフトを指定する
@@ -482,7 +484,7 @@ def configure(keymap):
     # （デフォルトキーは、["W-C-Left", "W-C-Right"]）
     desktop_switching_key = []
     # desktop_switching_key += [["W-b", "W-f"]]
-    desktop_switching_key += [["W-Left", "W-Right"]]
+    # desktop_switching_key += [["W-Left", "W-Right"]]
 
     # アクティブウィンドウを仮想デスクトップ間で移動するキーの組み合わせ（前、後 の順）を指定する（複数指定可）
     # （本機能を利用する場合は、Microsoft Store から SylphyHorn をインストールしてください）
