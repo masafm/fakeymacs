@@ -481,8 +481,8 @@ def configure(keymap):
     #   Winキーとの組み合わせとしてください）
     # （デフォルトキーは、["W-C-Left", "W-C-Right"]）
     desktop_switching_key = []
-    desktop_switching_key += [["W-b", "W-f"]]
-    # desktop_switching_key += [["W-Left", "W-Right"]]
+    # desktop_switching_key += [["W-b", "W-f"]]
+    desktop_switching_key += [["W-Left", "W-Right"]]
 
     # アクティブウィンドウを仮想デスクトップ間で移動するキーの組み合わせ（前、後 の順）を指定する（複数指定可）
     # （本機能を利用する場合は、Microsoft Store から SylphyHorn をインストールしてください）
